@@ -3,3 +3,4 @@
 EXPERIMENTO = "clasificacion-vinos"      # nombre del experimento en MLflow
 MODELO_REGISTRADO = "clasificador-vinos"  # nombre del modelo en el Model Registry
 SEMILLA = 42                              # misma partición de datos en cada ejecución
+TRACKING_URI = 'sqlite:///mlflow.db'

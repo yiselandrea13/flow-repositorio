@@ -12,7 +12,7 @@ from mlflow.models import infer_signature
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, f1_score
 
-from config import EXPERIMENTO, SEMILLA
+from config import EXPERIMENTO, SEMILLA, TRACKING_URI
 from data import cargar_datos
 
 
@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--max-depth", type=int, default=4)
     parser.add_argument("--run-name", default=None, help="nombre legible del run")
     args = parser.parse_args()
+    mlflow.set_tracking_uri(TRACKING_URI)
 
     # `mlflow run` ya asigna el experimento; con `python src/train.py` lo asignamos aquí
     if not os.environ.get("MLFLOW_RUN_ID"):

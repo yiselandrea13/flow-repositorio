@@ -2,7 +2,9 @@
 import mlflow
 from mlflow import MlflowClient
 
-from config import EXPERIMENTO, MODELO_REGISTRADO
+from config import EXPERIMENTO, MODELO_REGISTRADO, TRACKING_URI
+
+mlflow.set_tracking_uri(TRACKING_URI)
 
 mejores = mlflow.search_runs(
     experiment_names=[EXPERIMENTO],

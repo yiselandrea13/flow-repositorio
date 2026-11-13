@@ -4,13 +4,14 @@ import argparse
 import mlflow
 import pandas as pd
 
-from config import MODELO_REGISTRADO
+from config import MODELO_REGISTRADO, TRACKING_URI
 
 parser = argparse.ArgumentParser(description="Predicción con un modelo del registro")
 parser.add_argument("csv", help="archivo con las mismas columnas que se usaron al entrenar")
 parser.add_argument("--alias", default="champion", help="alias del modelo (champion, challenger...)")
 args = parser.parse_args()
 
+mlflow.set_tracking_uri(TRACKING_URI)
 modelo = mlflow.pyfunc.load_model(f"models:/{MODELO_REGISTRADO}@{args.alias}")
 datos = pd.read_csv(args.csv)
 datos["prediccion"] = modelo.predict(datos)
