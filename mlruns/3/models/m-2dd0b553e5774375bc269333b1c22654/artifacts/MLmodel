@@ -1,0 +1,44 @@
+artifact_path: file:C:/tets/mlflow-vinos/mlruns/3/models/m-2dd0b553e5774375bc269333b1c22654/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+is_signature_from_type_hint: false
+mlflow_version: 3.18.0
+model_id: m-2dd0b553e5774375bc269333b1c22654
+model_size_bytes: 5525753
+model_uuid: m-2dd0b553e5774375bc269333b1c22654
+prompts: null
+run_id: be2d8a00197244149b5ae637c03eaf77
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "alcohol", "required": true}, {"type": "double",
+    "name": "malic_acid", "required": true}, {"type": "double", "name": "ash", "required":
+    true}, {"type": "double", "name": "alcalinity_of_ash", "required": true}, {"type":
+    "double", "name": "magnesium", "required": true}, {"type": "double", "name": "total_phenols",
+    "required": true}, {"type": "double", "name": "flavanoids", "required": true},
+    {"type": "double", "name": "nonflavanoid_phenols", "required": true}, {"type":
+    "double", "name": "proanthocyanins", "required": true}, {"type": "double", "name":
+    "color_intensity", "required": true}, {"type": "double", "name": "hue", "required":
+    true}, {"type": "double", "name": "od280/od315_of_diluted_wines", "required":
+    true}, {"type": "double", "name": "proline", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-07 02:00:52.045982'
