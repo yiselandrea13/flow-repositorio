@@ -1,0 +1,13 @@
+.venv/
+mlflow.db
+mlruns/
+mlartifacts/
+__pycache__/
+.env
+model/
+mlruns.bak/
+mlflow.db.bak
+predicciones.*
+runs.csv
+nuevos_vinos.csv
+modelo_local/
